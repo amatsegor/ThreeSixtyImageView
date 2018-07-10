@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ua.amatsehor.threesixtyimageview.MainActivity">
+
+    <ua.amatsehor.threesixtyimageview.view.ThreeSixtyImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <SeekBar
+        android:id="@+id/sbSeekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="10"
+        android:progress="5"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        app:layout_constraintTop_toBottomOf="@id/sbSeekbar" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        app:layout_constraintStart_toEndOf="@id/btnLeft"
+        app:layout_constraintTop_toTopOf="@id/btnLeft" />
+
+</android.support.constraint.ConstraintLayout>
